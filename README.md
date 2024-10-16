@@ -3,7 +3,7 @@ HEADER_
 "Nav" - Logo y menú
 Inicio
 Servicios
-Reserva
+Reserva.
 
 BODY
 1. Inicio - Presentación empresa
