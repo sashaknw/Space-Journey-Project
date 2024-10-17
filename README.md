@@ -110,3 +110,82 @@ FOOTER
 Elon Musk probablemente tiene un plan para llevarnos a todos al espacio eventualmente. Mientras tanto, disfruta de las repeticiones de los lanzamientos de cohetes. Ah, y síguenos en Twitter para las últimas locuras.
 ![image](https://github.com/user-attachments/assets/d4975728-dc83-4b91-943e-50172589db2e)
 
+
+
+
+
+CAMBIO DE CABECERA:
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    background-image: url(Portada/SpaceJourney-interior.png);
+    background-repeat: no-repeat;
+    z-index: 1;
+    
+  }
+  
+.wrapper {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3; 
+  background: rgba(0, 0, 0, 0.5);
+}
+
+  .wrapper,
+  .content {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .content {
+    overflow-x: hidden;
+  }
+  
+  .content .section {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  /* .content .section.hero {
+    background-image: url(Portada/SpaceJourney-interior.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+
+  } */
+  
+  .image-container {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    perspective: 500px;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+
+
