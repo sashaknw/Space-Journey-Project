@@ -2,136 +2,128 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Journey</title>
-    <script src="/sript.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Journey</title>
+  <script src="/sript.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
-
-    <section class="titlePage">
-        <header>
-            <nav>
-                <button type="button" title="Home">
-                    <span>Home</span>
-                    <span class="material-symbols-outlined" aria-hidden="true">home</span>
-                    <svg viewBox="0 0 300 300" aria-hidden="true">
-                        <g>
-                            <text fill="currentColor">
-                                <textPath xlink:href="#circlePath">Home</textPath>
-                            </text>
-                            <text fill="currentColor">
-                                <textPath xlink:href="#circlePath" startOffset="50%">Home</textPath>
-                            </text>
-                        </g>
-                    </svg>
-                </button>
-                <button type="button">
-                    <span>About</span>
-                    <span class="material-symbols-outlined" aria-hidden="true">info</span>
-                    <svg viewBox="0 0 300 300" aria-hidden="true">
-                        <g>
-                            <text fill="currentColor">
-                                <textPath xlink:href="#circlePath">About</textPath>
-                            </text>
-                            <text fill="currentColor">
-                                <textPath xlink:href="#circlePath" startOffset="50%">About</textPath>
-                            </text>
-                        </g>
-                    </svg>
-                </button>
-                <button type="button">
-                    <span>Servicios</span>
-                    <span class="material-symbols-outlined" aria-hidden="true">SERVICIOS</span>
-                    <svg viewBox="0 0 300 300" aria-hidden="true">
-                        <g>
-                            <text fill="currentColor">
-                                <textPath xlink:href="#circlePath">Servicios</textPath>
-                            </text>
-                            <text fill="currentColor">
-                                <textPath xlink:href="#circlePath" startOffset="50%">Servicios</textPath>
-                            </text>
-                        </g>
-                    </svg>
-                </button>
-                <button type="button">
-                    <span>Reserva</span>
-                    <span class="material-symbols-outlined" aria-hidden="true">email</span>
-                    <svg viewBox="0 0 300 300">
-                        <g>
-                            <text fill="currentColor" aria-hidden="true">
-                                <textPath xlink:href="#circlePath">Contact</textPath>
-                            </text>
-                            <text fill="currentColor">
-                                <textPath xlink:href="#circlePath" startOffset="50%">Contact</textPath>
-                            </text>
-                        </g>
-                    </svg>
-                </button>
-            </nav>
-
-            <!-- SVG template with dynamic text -->
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 300 300" width="0" height="0">
-                <defs>
-                    <path id="circlePath" d="M 150, 150 m -50, 0 a 50,50 0 0,1 100,0 a 50,50 0 0,1 -100,0" />
-                </defs>
+  <section class="titlePage">
+    <header>
+      <div class="wrapper">
+        <nav class="navbar">
+          <button type="button" title="Home">
+            <span>Home</span>
+            <span class="material-symbols-outlined" aria-hidden="true">home</span>
+            <svg viewBox="0 0 300 300" aria-hidden="true">
+              <g>
+                <text fill="currentColor">
+                  <textPath xlink:href="#circlePath">Home</textPath>
+                </text>
+                <text fill="currentColor">
+                  <textPath xlink:href="#circlePath" startOffset="50%">Home</textPath>
+                </text>
+              </g>
             </svg>
-                <div class="wrapper">
-                    <div class="content">
-                        <section class="section hero"></section>
-                        <section class="section gradient-purple"></section>
-                        <section class="section gradient-blue"></section>
-                    </div>
-                    <div class="image-container">
-                        <img src="/assets/SpaceJourney-portada1.png" alt="image">
-                    </div>
-                </div>
-                
-                <script src="script.js"></script>
+          </button>
+          <button type="button">
+            <span>About</span>
+            <span class="material-symbols-outlined" aria-hidden="true">info</span>
+            <svg viewBox="0 0 300 300" aria-hidden="true">
+              <g>
+                <text fill="currentColor">
+                  <textPath xlink:href="#circlePath">About</textPath>
+                </text>
+                <text fill="currentColor">
+                  <textPath xlink:href="#circlePath" startOffset="50%">About</textPath>
+                </text>
+              </g>
+            </svg>
+          </button>
+          <button type="button">
+            <span>Servicios</span>
+            <span class="material-symbols-outlined" aria-hidden="true">SERVICIOS</span>
+            <svg viewBox="0 0 300 300" aria-hidden="true">
+              <g>
+                <text fill="currentColor">
+                  <textPath xlink:href="#circlePath">Servicios</textPath>
+                </text>
+                <text fill="currentColor">
+                  <textPath xlink:href="#circlePath" startOffset="50%">Servicios</textPath>
+                </text>
+              </g>
+            </svg>
+          </button>
+          <button type="button">
+            <span>Reserva</span>
+            <span class="material-symbols-outlined" aria-hidden="true">email</span>
+            <svg viewBox="0 0 300 300">
+              <g>
+                <text fill="currentColor" aria-hidden="true">
+                  <textPath xlink:href="#circlePath">Contact</textPath>
+                </text>
+                <text fill="currentColor">
+                  <textPath xlink:href="#circlePath" startOffset="50%">Contact</textPath>
+                </text>
+              </g>
+            </svg>
+          </button>
+        </nav>
+        <!-- SVG template with dynamic text -->
+      <!-- SVG template with dynamic text -->
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300"
+        width="0" height="0">
+        <defs>
+          <path id="circlePath" d="M 150, 150 m -50, 0 a 50,50 0 0,1 100,0 a 50,50 0 0,1 -100,0" />
+        </defs>
+      </svg>
 
-
-
-
-
-
-
-        </header>
-    </section>
-
-
-    <section class="sectionTwo">
-        <!-- scrollUp button iría aquí -->
-        <div class="textAboutUs">
-            <p class="aboutUs">
-                ¡Ven al espacio con SpaceJourney! ¡Lánzate al vacío interestelar, donde el WiFi es inexistente y el
-                oxígeno es un
-                lujo! Si crees que el precio es alto, piensa en el ROI a largo plazo: ¡una selfie en Marte será
-                invaluable en tu
-                Instagram!"
-
-                ¡Apúntate a la próxima misión! </p>
+        <div class="content">
+          <section class="section hero"></section>
         </div>
-        <div class="carrousel">
-            aquí va carrousel
+        <div class="image-container">
+          <img src="/assets/SpaceJourney-portada1.png" alt="image">
         </div>
-    </section>
+      </div>
+    </header>
+  </section>
+  
+  
+  <section class="sectionTwo">
+    <!-- scrollUp button iría aquí -->
+    <div class="textAboutUs">
+      <p class="aboutUs">
+        ¡Ven al espacio con SpaceJourney! ¡Lánzate al vacío interestelar, donde el WiFi es inexistente y el
+        oxígeno es un
+        lujo! Si crees que el precio es alto, piensa en el ROI a largo plazo: ¡una selfie en Marte será
+        invaluable en tu
+        Instagram!"
+
+        ¡Apúntate a la próxima misión! </p>
+    </div>
+    <div class="carrousel">
+      aquí va carrousel
+    </div>
+  </section>
+<section>
+  <div class="cajita">
+
+  </div>
+</section>
 
 
-    <section class="sectionThree">
-        <div class="formular">
+  <section class="sectionThree">
+    <div class="formular">
 
-        </div>
-        <footer>
+    </div>
+    <footer>
 
-        </footer>
-    </section>
+    </footer>
+  </section>
 
 </body>
 

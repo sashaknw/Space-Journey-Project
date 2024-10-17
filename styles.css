@@ -1,16 +1,32 @@
-* {
+.gsap-marker-end{
+display: none !important;
+}
+.gsap-marker-start {
+display: none !important;
+}
+.gsap-marker-scroller-start {
+    display: none !important;
+}
+.gsap-marker-scroller-end {
+    display: none !important;
+}
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: black;
 }
-
+.pin-spacer{
+    height: 100%;
+}
 
 .wrapper,
 .content {
     position: relative;
     width: 100%;
     z-index: 1;
+    background-color: black;
+    color: white;
 }
 
 .content {
@@ -21,7 +37,6 @@
     width: 100%;
     height: 100vh;
 }
-
 .content .section.hero {
     background-image: url(/assets/SpaceJourney-interior.png);
     background-position: center center;
@@ -172,11 +187,8 @@ button svg g {
 }
 .sectionTwo {
     position: absolute;
-    margin-top: -2700px;
     display: flex;
-   
     align-items: center;
-    
 }
 .textAboutUs{
     position: relative;
@@ -184,13 +196,10 @@ button svg g {
     width: 1000px;
     height: 800px;
     background-color: aqua;
-    margin-left: 25%;
     
 }
 .aboutUs {
-
     width: 500px;
-    margin: auto;
 }
 .carrousel{
     position: relative;
@@ -200,5 +209,10 @@ button svg g {
 
 }
 
+.cajita {
+    height: 500px;
+    width: 500px;
+    background-color: blueviolet;
+}
 /*aqui va missions*/
 
