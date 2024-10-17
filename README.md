@@ -69,3 +69,44 @@ CORREOS PARA DRIVE
 obritoperez@gmail.com
 falconjulia.personal@gmail.com
 ancorgabriel@gmail.com
+
+
+
+TEXTOS
+
+H1
+"¿Cansado de tus vacaciones terrícolas en aburridas playas y montañas?” 
+
+
+p
+¡Ven al espacio con SpaceJourney! ¡Lánzate al vacío interestelar, donde el WiFi es inexistente y el oxígeno es un lujo! Si crees que el precio es alto, piensa en el ROI a largo plazo: ¡una selfie en Marte será invaluable en tu Instagram!"
+
+¡Apúntate a la próxima misión!
+
+
+
+SECCIÓN SERVICIOS
+H1 - Viajes Espaciales: Porque el Futuro es Hoy, o quizás Mañana
+
+En SpaceJourney, no solo lanzamos cohetes. ¡Lanzamos sueños! Y a veces, también a turistas desprevenidos. Con nuestras increíbles opciones de vuelos espaciales, te preguntarás: '¿Realmente necesitaba pagar 100 millones de dólares para flotar por 10 minutos?'"
+
+
+Orbita Baja:
+Un viaje alrededor de la Tierra, ideal para quienes ya están aburridos de los hoteles de lujo en la Tierra. ¡Atención! 99% de probabilidad de ver un satélite de tu compañía telefónica... aunque no mejorará tu señal.
+
+Vuelo Espacial Suborbital: 
+"Experimenta lo más parecido a una montaña rusa en el espacio, con una duración comparable a la espera en la cola de un Starbucks."
+
+Misión a Marte (¡solo para valientes!): 
+"¿Te atreves a pasar 6 meses en una lata de metal para llegar a un planeta desértico? No prometemos comodidades, pero sí muchas emociones y polvo rojo."
+
+
+FORMULARIO
+"Reserva tu Viaje: Porque estar en la Tierra ya es demasiado mainstream"
+
+
+FOOTER
+"© 2024 SpaceJourney. 
+Elon Musk probablemente tiene un plan para llevarnos a todos al espacio eventualmente. Mientras tanto, disfruta de las repeticiones de los lanzamientos de cohetes. Ah, y síguenos en Twitter para las últimas locuras.
+![image](https://github.com/user-attachments/assets/d4975728-dc83-4b91-943e-50172589db2e)
+
