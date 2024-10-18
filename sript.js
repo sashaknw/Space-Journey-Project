@@ -83,19 +83,10 @@ let currentIndex = 0;
 const totalImages = images.length;
 
 function updateCarousel() {
-  const imageWidth = 200; // Width of the image
-  const imageMargin = 20; // Margin between images
-  const carouselWidth = 700; // Width of the carousel
-  // intento de centrar la imagen
-  const offset = -(
-    currentIndex * (imageWidth + imageMargin) -
-    carouselWidth / 1.5 +
-    imageWidth / 1.5
-  ); // centrar la img activa
+  const offset = -(currentIndex * (900 + 20) - 1000 / 2 + 900 / 2); // Center the  image
   const carouselContainer = document.querySelector(".carousel-container");
   carouselContainer.style.transform = "translateX(" + offset + "px)";
 
-  //aqui asignamos clases
   for (let i = 0; i < totalImages; i++) {
     if (i === currentIndex) {
       images[i].classList.add("active");
@@ -106,6 +97,7 @@ function updateCarousel() {
     }
   }
 }
+
 function nextImage() {
   currentIndex++;
   if (currentIndex >= totalImages) {
@@ -115,6 +107,7 @@ function nextImage() {
 }
 
 setInterval(nextImage, 3000);
+
 updateCarousel();
 
 
