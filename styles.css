@@ -1,22 +1,28 @@
-.gsap-marker-end{
-display: none !important;
+.gsap-marker-end {
+    display: none !important;
 }
+
 .gsap-marker-start {
-display: none !important;
+    display: none !important;
 }
+
 .gsap-marker-scroller-start {
     display: none !important;
 }
+
 .gsap-marker-scroller-end {
     display: none !important;
 }
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: black;
+    height: 100vh;
 }
-.pin-spacer{
+
+.pin-spacer {
     height: 100%;
 }
 
@@ -37,6 +43,7 @@ body {
     width: 100%;
     height: 100vh;
 }
+
 .content .section.hero {
     background-image: url(/assets/SpaceJourney-interior.png);
     background-position: center center;
@@ -159,60 +166,106 @@ nav>button:hover>svg {
 }
 
 @supports (-webkit-touch-callout: none) {
-   
-  button svg {
-    
-      translate: -50% -50%;
-      animation: rotate var(--_ani-speed) linear infinite;
-  }
+
+    button svg {
+
+        translate: -50% -50%;
+        animation: rotate var(--_ani-speed) linear infinite;
+    }
 }
+
 @supports not (-webkit-touch-callout: none) {
 
 
-button svg g {
-    transform-origin: center;
-    animation: rotate var(--_ani-speed) linear infinite;
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
+    button svg g {
+        transform-origin: center;
+        animation: rotate var(--_ani-speed) linear infinite;
     }
 
-    100% {
-        transform: rotate(360deg);
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
     }
+
+    /* aqui termina nav/home */
 }
-/* aqui termina nav/home */
-}
+
 .sectionTwo {
-    position: absolute;
+    background-color: black;
+}
+
+/*aqui va carousel*/
+.overCarousel {
     display: flex;
     align-items: center;
-}
-.textAboutUs{
-    position: relative;
-    display: flex;
-    width: 1000px;
-    height: 800px;
-    background-color: aqua;
-    
-}
-.aboutUs {
-    width: 500px;
-}
-.carrousel{
-    position: relative;
-    width: 1500px;
-    border: 1px solid black;
-    height: 800px;
-
-}
-
-.cajita {
+    justify-content: center;
+    margin: 0;
+    border: 1px solid #111111;
+    width: 100%;
+    background-color: black;
     height: 500px;
-    width: 500px;
-    background-color: blueviolet;
 }
-/*aqui va missions*/
 
+.textCarousel {
+    margin: 10px;
+    width: 400px;
+    height: fit-content;
+}
+
+.carousel {
+    width: 100%;
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin: 5px 5px 5px 5px;
+    box-sizing: border-box;
+    align-items: center;
+    margin-top: 100px;
+    padding: 10px;
+    /* border: 1px solid #ccc; */
+}
+
+.aboutUs {
+    font-size: 26px;
+    color: white;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 1.5s ease-in-out;
+    position: relative;
+}
+
+.carousel-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0.75;
+    border-radius: 10px;
+    margin-top: 100px
+}
+
+.carousel-image.active {
+    transform: scale(1.2);
+    opacity: 1;
+    z-index: 2;
+    width: 100%;
+    box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.carousel-image.inactive {
+    transform: scale(0.8);
+    opacity: 0.9;
+    transform: blur(70%);
+    z-index: 1;
+}
+
+/*aqui va missions*/
