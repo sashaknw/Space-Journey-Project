@@ -167,8 +167,9 @@ function crearFormulario() {
   // Crear el botón de envío
   const botonEnviar = document.createElement('button');
 
+  //INTENTO DE CREAR CLASE!!
+  botonEnviar.classList.add('botoncito');
   
-
   botonEnviar.textContent = 'Enviar';
   botonEnviar.setAttribute('type', 'submit');
 
