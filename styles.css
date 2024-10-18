@@ -1,3 +1,17 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    height: 100vh;
+    font-family: "Space Grotesk", sans-serif;
+    -webkit-font-smoothing: antialiased
+}
+
+
+/* AQUÍ EMPIEZA PORTADA ANIMACIÓN*/
+
 .gsap-marker-end {
     display: none !important;
 }
@@ -14,13 +28,6 @@
     display: none !important;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: black;
-    height: 100vh;
-}
 
 .pin-spacer {
     height: 100%;
@@ -32,7 +39,7 @@ body {
     width: 100%;
     z-index: 1;
     background-color: black;
-    color: white;
+
 }
 
 .content {
@@ -45,7 +52,7 @@ body {
 }
 
 .content .section.hero {
-    background-image: url(/assets/SpaceJourney-interior.png);
+    background-image: url(/assets/SpaceJourney-interior2.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -70,40 +77,91 @@ body {
     object-position: center center;
 }
 
-/* aqui empieza section one */
+/*AQUÍ TERMINA LA PORTADA*/
+
+
+
+/* AQUÍ EMPIEZA NAV */
+/* Posicionamiento para que el nav se superponga a la imagen*/
+
+
+Ajustar el logo si es necesario 
+
+.logo-container{
+    display: flex;
+    align-items: self-start;
+    left: 0;
+
+}
+.logo-SpaceJourney {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: auto;
+    z-index: 7;
+    transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+    justify-self: flex-start;
+}
+
 button {
     appearance: none;
+    /* Elimina estilos por defecto en iOS y otros sistemas */
     background-color: transparent;
+    /* Fondo transparente */
     border: none;
+    /* Sin bordes */
     cursor: pointer;
     outline: none;
+    /* Sin contorno al enfocar */
     padding: 0;
     margin: 0;
     font-family: inherit;
     font-size: inherit;
     color: inherit;
+    /* Hereda el color de texto del padre */
     text-decoration: none;
     text-transform: none;
     line-height: normal;
     overflow: visible;
+    box-shadow: none;
+    /* Sin sombras */
+
 }
 
+
 nav {
+    position: absolute;
     --_clr-txt: rgb(255, 255, 255);
     --_clr-txt-svg: rgb(147, 158, 184);
     --_ani-speed: 6s;
-    /* speed of rotating text */
-
+    /* Velocidad de rotación del texto */
     display: flex;
-    /*flex-wrap: wrap;*/
     gap: 1rem;
-    font-size: 0.9rem;
-    top: -2000px;
-    justify-content: space-between;
-    padding-top: 30px;
-    margin-right: 30px;
-    z-index: 3;
+    color: aliceblue;
+    z-index: 5;
+    opacity: 0;
+    /* Oculto al inicio */
+    pointer-events: none;
+    cursor: pointer;
+    top: 6%;
+    left: 2%;
+    right: 5%;
+    justify-content: end;
+    border: none;
+    e
 }
+
+nav.show {
+    opacity: 1;
+    /* Aparece */
+    pointer-events: auto;
+    /* Permitir interacción */
+    transition: opacity 1s ease-in-out;
+    border: none;
+}
+
+
+
 
 nav>button {
     position: relative;
@@ -111,37 +169,44 @@ nav>button {
     place-content: center;
     grid-template-areas: 'stack';
     padding: 0 1.5rem;
-    text-transform: uppercase;
+    text-transform: none;
     font-weight: 300;
+    color: aliceblue;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em;
+    font-family: "Space Grotesk", sans-serif;
 }
 
-/* place button items on top of each other */
+/* Estilo de los elementos dentro del botón */
 nav>button>span {
     transition: all 300ms ease-in-out;
     grid-area: stack;
+
 }
 
-/* nav icon */
+/* Ocultar el ícono hasta el hover */
 nav>button>span:last-of-type {
     margin-top: 0.25rem;
     transform: scale(0);
     transition-delay: 0ms;
     border-radius: 50%;
+    border: none;
 }
 
-/* hover - hide text */
-nav>button:focus-visible>span:first-of-type,
+/* Hover - Ocultar el texto y mostrar el ícono */
 nav>button:hover>span:first-of-type {
     transform: scale(0);
+    background-color: transparent;
+    border: none;
 }
 
-/* hover - reveal icon */
-nav>button:focus-visible>span:last-of-type,
 nav>button:hover>span:last-of-type {
     transform: scale(1);
+    border: none;
 }
 
-/* nav SVG circular text*/
+/* Estilos del SVG circular */
 nav>button>svg {
     position: absolute;
     width: 200px;
@@ -151,49 +216,48 @@ nav>button>svg {
     transform: translate(-50%, -50%);
     transform-origin: center;
     opacity: 0;
-    text-transform: uppercase;
+    text-transform: none;
     transition: all 300ms ease-in-out;
     color: var(--_clr-txt-svg);
+
+    border: none;
 }
 
-/* hover - reveal rotating SVG */
+/* Hover - Mostrar y animar el SVG */
 nav>button:focus-visible>svg,
 nav>button:hover>svg {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
     transition-delay: 150ms;
     transition: all 300ms ease-in-out;
+    background-color: transparent;
+    border: none;
 }
 
-@supports (-webkit-touch-callout: none) {
+/* Animación de rotación para el texto dentro del SVG */
+nav>button svg g {
+    transform-origin: center;
+    animation: rotate var(--_ani-speed) linear infinite;
+    border: none;
+}
 
-    button svg {
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
 
-        translate: -50% -50%;
-        animation: rotate var(--_ani-speed) linear infinite;
+    100% {
+        transform: rotate(360deg);
     }
 }
 
-@supports not (-webkit-touch-callout: none) {
+
+/* AQUÍ TERMINA NAV */
 
 
-    button svg g {
-        transform-origin: center;
-        animation: rotate var(--_ani-speed) linear infinite;
-    }
 
-    @keyframes rotate {
-        0% {
-            transform: rotate(0deg);
-        }
 
-        100% {
-            transform: rotate(360deg);
-        }
-    }
 
-    /* aqui termina nav/home */
-}
 
 .sectionTwo {
     background-color: black;
@@ -269,3 +333,59 @@ nav>button:hover>svg {
 }
 
 /*aqui va missions*/
+
+
+
+/*FORMULARIO*/
+         #miFormulario {
+    
+             background-color: #111111;
+             /* Fondo oscuro */
+             color: #fff;
+             padding: 90px;
+             border-radius: 35%;
+             width: 800px;
+             margin: 20px auto;
+             /* Centrado */
+    
+         }
+    
+         /* Estilos para los campos del formulario */
+         input,
+         textarea {
+             width: 95%;
+             padding: 8px;
+             margin-bottom: 10px;
+             border-radius: 5px;
+             border: none;
+         }
+
+                  /* Estilos para el overlay */
+                  .overlay {
+                      position: fixed;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      background-color: rgba(0, 0, 0, 0.8);
+                      /* Fondo opaco */
+                      display: none;
+                      justify-content: center;
+                      align-items: center;
+                      color: aliceblue;
+                      z-index: 999;
+                      /* Asegura que esté sobre todo el contenido */
+                  }
+        
+                  /* Estilo para la ventana emergente personalizada */
+                  .popup {
+                      background-color: rgb(8, 8, 8);
+                      padding: 20px;
+                      border-radius: 10px;
+                      box-shadow: 8px 8px 8px rgba(222, 9, 9, 0.6);
+                      text-align: center;
+                  }
+        
+                  .popup button {
+                      margin: 10px;
+                  }
