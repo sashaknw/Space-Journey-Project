@@ -2,11 +2,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: black;
+    color: #F0F2F0;
     height: 100vh;
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "DM Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
-    background-color: #111111;
+    background-color: #FBFBFB;
 }
 
 
@@ -124,6 +124,7 @@ button {
     overflow: visible;
     box-shadow: none;
     /* Sin sombras */
+    font-family: "Space Grotesk", sans-serif;
 
 }
 
@@ -147,7 +148,7 @@ nav {
     right: 5%;
     justify-content: end;
     border: none;
-    
+
 }
 
 nav.show {
@@ -256,26 +257,28 @@ nav>button svg g {
 
 
 
-
+/*AQUÍ EMPIEZA SECTION TWO*/
 
 .sectionTwo {
-    background-color: black;
+    background-color: #FBFBFB;
+
 }
 
-/*aqui va carousel*/
+
 .overCarousel {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
     width: 100%;
-    background-color: #111111;
+    background-color: #FBFBFB;
     height: 500px;
+    margin-bottom: 4%;
 }
 
 .textCarousel {
-    margin-left: 30px;
-    width: 600px;
+    margin-right: 50px;
+    width: 500px;
     height: fit-content;
 }
 
@@ -293,14 +296,10 @@ nav>button svg g {
     /* border: 1px solid #ccc; */
 }
 
-.aboutUs {
-    font-size: 26px;
-    color: white;
-}
 
 .carousel-container {
     display: flex;
-    transition: transform 1.5s ease-in-out ;
+    transition: transform 1.5s ease-in-out;
     position: relative;
 }
 
@@ -312,7 +311,6 @@ nav>button svg g {
     opacity: 0.75;
     border-radius: 10px;
     margin-top: 100px
-    
 }
 
 .carousel-image.active {
@@ -330,13 +328,151 @@ nav>button svg g {
     z-index: 1;
 }
 
-/*aqui va missions*/
-.containerFigure{
+
+
+h1 {
+    color: #020540;
+    font-size: 3.8em;
+    font-weight: 900;
+    font-family: "Space Grotesk", sans-serif;
+    margin-bottom: 0;
+    line-height: 0.9;
+}
+
+p {
+    color: #2C2C2E;
+    font-size: 1.4em;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.5;
+}
+
+.paragraph {
+    color: #200CE8;
+    font-size: 1.8em;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+
+.button-link {
+    display: inline-block;
+    background-color: #200CE8;
+    color: #FBFBFB;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    /* Transición suave para los cambios de hover */
+}
+
+.button-link:hover {
+    background-color: #FBFBFB;
+    color: #200CE8;
+    border: 2px solid #200CE8;
+}
+
+
+
+
+
+/*AQUÍ VA MISSION*/
+.sectionThree {
+    background-color: aaaaaa;
+    margin-top: 2%;
+    padding-bottom: 7%;
+
+}
+
+.overMission {
+    background-color: #ffffff;
+}
+
+.textMission {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 0;
+}
+
+.aboutMission {
+    width: 40%;
+    padding-left: 12%;
+}
+
+
+.titulo-principal,
+.aboutMission h2,
+.aboutMission p {
+    text-align: right;
+}
+
+.titulo-principal {
+    color: #020540;
+    text-align: end;
+    font-size: 4em;
+    line-height: 1;
+}
+
+
+
+.aboutMission h2 {
+    color: #200CE8;
+    font-size: 2.5em;
+    padding-left: 15%;
+
+}
+
+.aboutMission p {
+    color: #2C2C2E;
+
+}
+
+
+.marte {
+    width: 35%;
+    animation: float 25s infinite ease-in-out;
+    transition: transform 25s ease-in-out;
+
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1) rotate(2.142rad);
+    }
+
+    25% {
+        transform: translate(0px, -100px) scale(1.2) rotate(-0.25turn);
+    }
+
+    50% {
+        transform: translate(-80px, 0px) scale(1.5) rotate(2.142rad);
+        ;
+    }
+
+    75% {
+        transform: translate(180px, 90px) scale(0.8) rotate(-0.4turn);
+    }
+
+}
+
+
+.containerFigure {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #111111;
+    background-color: #FBFBFB;
+    padding-top: 2%;
+    padding-bottom: 0;
 }
+
+
 figure {
     display: grid;
     border-radius: 1rem;
@@ -353,7 +489,7 @@ figure figcaption {
     display: grid;
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items: flex-start;
     font-family: sans-serif;
     font-size: 2rem;
     font-weight: bold;
@@ -367,11 +503,12 @@ figure figcaption {
     -webkit-mask-composite: xor;
     -webkit-mask-clip: text, padding-box;
     margin: -1px;
-    height: 300px !important;
+    height: 600px !important;
     width: 550px !important;
-    
+
 }
-.titleMission{
+
+.titleMission {
     margin-left: 30px;
 }
 
@@ -394,83 +531,421 @@ figure:hover img {
 @supports not (-webkit-mask-clip: text) {
     figure figcaption {
         -webkit-mask: none;
-        color: #ffffff;
+        color: #FBFBFB;
     }
 }
+
 .imageMission {
     width: 550px;
-    height: 300px;
+    height: 600px;
 }
 
 
+/*AQUÍ VA EL COUNTDOWN*/
+.countdownContainer {
+    align-items: center;
+    background-color: #200CE8;
+    display: flex;
+    font-weight: 900;
+    font-family: "Space Grotesk", sans-serif;
+    margin-top: 3%;
+}
+
+.container {
+    color: #FBFBFB;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container h1 {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    color: #FBFBFB;
+}
+
+.container li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+.container li span {
+    display: block;
+    font-size: 4.5rem;
+}
+
+.emoji {
+    display: none;
+    padding: 1rem;
+}
+
+.emoji span {
+    font-size: 4rem;
+    padding: 0 .5rem;
+}
+
+@media all and (max-width: 768px) {
+    h1 {
+        font-size: calc(1.5rem * var(--smaller));
+    }
+
+    li {
+        font-size: calc(1.125rem * var(--smaller));
+    }
+
+    li span {
+        font-size: calc(3.375rem * var(--smaller));
+    }
+}
+
+
+
+
+/* AQUÍ VA EL FAQ*/
+.faq-section {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #FBFBFB;
+    padding: 4%;
+    color: #200CE8;
+    border: 2px solid #200CE8;
+}
+
+.faq-header {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #200CE8;
+
+}
+
+.faq-header>p {
+    font-size: 2em;
+    color: #020540;
+    padding: 0;
+}
+
+.faq {
+    font-size: 4.55em;
+    color: #200CE8;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+details {
+    cursor: pointer;
+}
+
+summary:focus-visible {
+    outline: 2px solid orange;
+    outline-offset: 8px;
+    border-radius: 4px;
+}
+
+h4 {
+    width: 760px;
+}
+
+summary {
+    font-size: 1.3em;
+    color: #200CE8;
+    display: flex;
+    justify-items: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+summary::marker {
+    display: none;
+    content: "";
+}
+
+.material-symbols-outlined {
+    margin-top: 4px;
+    color: #FBFBFB;
+}
+
+details>p {
+    max-width: 650px;
+    color: #020540;
+    font-size: 1.1em;
+    line-height: 155%;
+    letter-spacing: .1px;
+    margin-bottom: 40px;
+    padding-left: 10px;
+}
+
+hr {
+    border: 1px solid #020540;
+    margin-block-end: 30px;
+}
+
+.arrowFAQ {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    margin-left: 70px;
+
+}
 
 
 
 /*FORMULARIO*/
+
+.form-Title {
+    font-size: 2.55em;
+    color: #200CE8;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 2%;
+    font-weight: bold;
+    text-align: center;
+}
+
+
 #miFormulario {
-
-    background-color: #111111;
-    /* Fondo oscuro */
-    color: #fff;
-    padding: 90px;
-    border-radius: 35%;
-    width: 800px;
+    background-color: #200CE8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
     margin: 20px auto;
-    /* Centrado */
-
-}
-.botones2{
+    width: 90%;
+    max-width: 500px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    padding: 35px;
+    position: relative;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+
 }
-.botoncito {
+
+
+.input-container {
+    position: relative;
     display: flex;
-    justify-items: center;
-    padding: 10px 15px;
-    background-color: #4CAF50;
-    color: white;
-    box-shadow: 1px 1px 1px rgba(222, 9, 9, 0.6);
-    border-radius: 5px;
-    font-size: 16px;
-
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-/* Estilos para los campos del formulario */
-input,
-textarea {
-    width: 95%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+.input-container input,
+.input-container textarea {
+    flex: 1;
+    padding: 10px 45px;
+    /* Espacio suficiente para no solapar el texto con el icono */
+    height: 40px;
     border: none;
+    /* No border */
+    border-radius: 10px;
+    /* Rounded borders */
+    background-color: #FBFBFB;
+    /* Slightly lighter dark shade for input backgrounds */
+    color: #020540;
+    /* White text for inputs */
+    font-size: 14pt;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 400;
+    outline: none;
+
 }
+
+.input-container textarea {
+    padding-left: 40px;
+    padding-right: 10px;
+    padding-top: 40px;
+    height: auto;
+    min-height: 60px;
+}
+
+.input-container i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #020540;
+    font-size: 1.3em;
+    z-index: 3;
+}
+
+
+
+.input-container:hover {
+    scale: 1.05;
+
+}
+
+
+.input-container input:hover {
+    background-color: #FBFBFB;
+
+}
+
+.input-container textarea:hover {
+    background-color: #FBFBFB;
+
+}
+
+
+.input-container:hover i {
+    scale: 1.05;
+    color: #200CE8;
+
+}
+
+.input-container:hover textarea {
+    color: #200CE8;
+}
+
+.input-container:hover input {
+    color: #200CE8;
+}
+
+
+
+
+.botoncito {
+    background-color: #FBFBFB;
+    color: #200CE8;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid transparent;
+    margin-top: 2%;
+    transition: all 0.3s ease;
+    /* Transición suave para los cambios de hover */
+    align-self: center;
+    /* Centra el botón en el formulario */
+}
+
+.botoncito:hover {
+    background-color: transparent;
+    color: #FBFBFB;
+    border: 2px solid #FBFBFB;
+}
+
+.botoncito:active {
+    background-color: #00F4CC;
+    color: #020540;
+}
+
+
 
 /* Estilos para el overlay */
 .overlay {
+    background-color: #020540;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    /* Fondo opaco */
+    top: 2%;
+    left: 15%;
+    justify-content: center;
     display: none;
+    width: 70%;
     justify-content: center;
     align-items: center;
-    color: aliceblue;
+    color: #FBFBFB;
     z-index: 999;
     /* Asegura que esté sobre todo el contenido */
 }
 
 /* Estilo para la ventana emergente personalizada */
 .popup {
-    background-color: rgb(8, 8, 8);
-    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 140px;
     border-radius: 10px;
-    box-shadow: 8px 8px 8px rgba(222, 9, 9, 0.6);
+    box-shadow: 8px 8px 8px #200CE8;
     text-align: center;
 }
 
 .popup button {
     margin: 10px;
+}
+
+.popup h2 {
+    text-align: center;
+    color: #FBFBFB;
+    font-size: 2.5em;
+}
+
+.popup h3 {
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.popup ol li {
+    text-align: left;
+    font-size: 1.2em;
+}
+
+mark {
+    background-color: #200CE8;
+    color: #FBFBFB;
+}
+
+.aceptacion {
+    text-align: center;
+    color: #FBFBFB;
+    font-size: 1em;
+    opacity: 0.2;
+    line-height: 1;
+}
+
+
+
+/* AQUÍ VA FOOTER*/
+.containerFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+    background-color: #200CE8;
+    text-align: left;
+    padding: 10px;
+    width: 100%;
+    height: 220px;
+    font-size: 16px;
+
+
+
+}
+
+.contacto {
+    align-items: start;
+}
+
+.containerFooter p {
+    margin: 2%;
+    padding: 0;
+    justify-content: left;
+    color: #FBFBFB;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    line-height: 1.2;
+    max-width: 25%;
+}
+
+.mail,
+.tel {
+
+    justify-content: left;
+    color: #FBFBFB;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+#iconosRedes img {
+    height: 26px !important;
+    width: 26px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10PX;
+    padding: 0px;
 }
