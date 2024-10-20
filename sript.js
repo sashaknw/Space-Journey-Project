@@ -74,8 +74,21 @@ window.addEventListener("load", () => {
   );
 });
 
-// CARRUSEL
-// CARRUSEL
+// VIAJE DEL INICIO A SECCIONES:
+//Event listener for the reservaButton
+document.getElementById('reservaButton').addEventListener('click', function() {
+    const formContainer = document.getElementById('formContainer');
+    formContainer.scrollIntoView({ behavior: 'smooth' });
+});
+
+// Event listener for the ServiciosButton
+document.getElementById('serviciosButton').addEventListener('click', function() {
+    const sectionTwo = document.getElementById('sectionTwo');
+    sectionTwo.scrollIntoView({ behavior: 'smooth' });
+});
+
+// CARROUSEL
+
 const carouselContainer = document.querySelector(".carousel-container");
 let images = document.querySelectorAll(".carousel-image");
 let currentIndex = 0;
@@ -336,6 +349,9 @@ function cerrarVentanaEmergente(confirmado) {
   const overlay = document.getElementById("overlay");
   overlay.style.display = "none";
 
+
+
+
   // Llevar al usuario al inicio de la página
   window.scrollTo(0, 0);
 
@@ -345,3 +361,4 @@ function cerrarVentanaEmergente(confirmado) {
     //alert('El envío del formulario ha sido cancelado.');
   }
 }
+
