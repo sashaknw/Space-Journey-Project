@@ -486,38 +486,44 @@ figure>* {
 }
 
 figure figcaption {
-    display: grid;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     font-family: sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #0000;
-    padding: .75rem;
-    background: var(--c, #0009);
+    font-weight: 600;
+    color: #ffffff;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.7);
     clip-path: inset(0 var(--_i, 100%) 0 0);
-    -webkit-mask:
-        linear-gradient(#000 0 0),
-        linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    -webkit-mask-clip: text, padding-box;
-    margin: -1px;
+    transition: clip-path 0.4s ease-in-out;
     height: 600px !important;
     width: 550px !important;
 
 }
 
-.titleMission {
-    margin-left: 30px;
+.titleOrbitaBaja,
+.titleSuborbital,
+.titleMarte {
+    font-size: 5rem;
+    margin: 20px, 20px, 10px, 40px;
+}
+
+.textSuborbital p, 
+.textOrbitaBaja p,
+.textMarte p {
+    font-size: 1.75rem;
+    margin: 20px, 60px, 10px, 10px;
+    font-weight: 800;
+    color: rgb(255, 255, 255, 0.6);
+   
+}
+.textOrbitaBaja,
+.textMarte {
+    padding: 150px 20px 20px 20px;
 }
 
 .textSuborbital {
-    font-size: 1rem;
-    padding-top: 100px;
-    margin-left: 30px;
-    width: 400px;
-
+    padding: 100px 20px 20px 20px;
 }
 
 figure:hover figcaption {
@@ -899,18 +905,14 @@ mark {
 /* AQUÍ VA FOOTER*/
 .containerFooter {
     display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: start;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     background-color: #200CE8;
-    text-align: left;
     padding: 10px;
     width: 100%;
     height: 220px;
     font-size: 16px;
-
-
-
 }
 
 .contacto {
@@ -931,21 +933,32 @@ mark {
 
 .mail,
 .tel {
-
-    justify-content: left;
     color: #FBFBFB;
     text-decoration: none;
     font-size: 1.1em;
     font-family: "Space Grotesk", sans-serif;
 }
 
-#iconosRedes img {
-    height: 26px !important;
-    width: 26px !important;
+#iconosRedes {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin: 10PX;
+    padding: 0px;
+}
+
+#facebook:hover,
+#instagram:hover,
+#twitter:hover {
+    scale: 1.2;
+    cursor: pointer;
+    
+}
+
+#iconosRedes img {
+    height: 25px !important;
+    width: 25px !important;
     margin: 10PX;
     padding: 0px;
 }
