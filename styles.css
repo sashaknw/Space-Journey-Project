@@ -984,28 +984,7 @@ mark {
 }
 
 /*elon*/
-.overlay2 {
-    background-color: #333333fa;
-    position: fixed;
-    top: 2%;
-    left: 15%;
-    justify-content: center;
-    display: none;
-    width: 70%;
-    justify-content: center;
-    align-items: center;
-    color:transparent;
-    z-index:999;
-    /* Asegura que esté sobre todo el contenido */
-}
-.popup2 {
-    justify-content: center;
-    align-items: center;
-    padding: 140px;
-    border-radius: 10px;
-    box-shadow: 8px 8px 8px #ff7300;
-    text-align: center;
-}
+
 
 .fade {
     position: relative;
@@ -1055,7 +1034,7 @@ mark {
     /* Alto completo */
    
     /* Habilita scroll si es necesario */
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.9);
     /* Fondo semi-transparente */
 }
 
@@ -1120,7 +1099,6 @@ mark {
     color: #feda4a;
     font-family: 'arial black', sans-serif !important;
     font-weight: 900 !important;
-    font-style: 
     letter-spacing: 4px;
     line-height: 150%;
     perspective: 400px;
