@@ -300,11 +300,15 @@ nav>button svg g {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 60px;
+    margin-left: 30px;
     width: 100%;
     background-color: #FBFBFB;
     height: 500px;
     margin-bottom: 4%;
+
 }
 
 .textCarousel {
@@ -319,7 +323,7 @@ nav>button svg g {
     height: 500px;
     overflow: hidden;
     position: relative;
-    margin: 5px 5px 5px 5px;
+    margin: 5px;
     box-sizing: border-box;
     align-items: center;
     margin-top: 100px;
@@ -523,38 +527,52 @@ figure figcaption {
     font-family: sans-serif;
     font-weight: 600;
     color: #ffffff;
-    padding: 1.5rem;
+    padding: 1rem;
     background: rgba(0, 0, 0, 0.7);
     clip-path: inset(0 var(--_i, 100%) 0 0);
     transition: clip-path 0.4s ease-in-out;
     height: 600px !important;
-    width: 550px !important;
+    width: 450px !important;
+
+}
+.figcaptionOrbitaBaja{
+    max-width: 450px;
+    padding:0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 }
 
-.titleOrbitaBaja,
+.titleOrbitaBaja{
+    font-size: 4.02rem;
+    padding-top: 20px;
+    padding-left: 15px;
+
+}
+
 .titleSuborbital,
 .titleMarte {
-    font-size: 5rem;
-    margin: 20px, 20px, 10px, 40px;
+    font-size: 4rem;
+    padding-left: 20px
 }
 
 .textSuborbital p, 
 .textOrbitaBaja p,
 .textMarte p {
-    font-size: 1.75rem;
-    margin: 20px, 60px, 10px, 10px;
+    font-size: 1.5rem;
     font-weight: 800;
     color: rgb(255, 255, 255, 0.6);
    
 }
 .textOrbitaBaja,
-.textMarte {
-    padding: 150px 20px 20px 20px;
-}
-
+.textMarte,
 .textSuborbital {
-    padding: 100px 20px 20px 20px;
+    padding: 120px 100px 20px 25px;
+    display: flex;
+}
+.textSuborbital {
+    padding-top: 85px;
 }
 
 figure:hover figcaption {
@@ -648,7 +666,10 @@ figure:hover img {
     background-color: #FBFBFB;
     padding: 4%;
     color: #200CE8;
-    border: 2px solid #200CE8;
+    border-right: 2px solid #200CE8;
+    border-bottom: 2px solid #200CE8;
+    border-left: 2px solid #200CE8;
+
 }
 
 .faq-header {

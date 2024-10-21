@@ -152,7 +152,7 @@ function updateCarousel() {
   // Aplicar los efectos de escala y opacidad
   images.forEach((img, index) => {
     if (index === currentIndex) {
-      img.style.transform = "scale(1.2)";
+      img.style.transform = "scale(1.1)";
       img.style.opacity = "1";
       img.style.zIndex = "2";
     } else {
