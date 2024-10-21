@@ -254,8 +254,39 @@ nav>button svg g {
 
 /* AQUÍ TERMINA NAV */
 
+/*astro muñeco*/
 
+.floating-button {
+     display: none; 
+     position: fixed;
+    bottom: 300px;
+    right: 6%;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 50px;
+    transition: 2s;
+    z-index: 2;
 
+}
+
+.floating-button.show {
+    display: flex;
+    justify-content: right;
+}
+
+.floating-button img {
+    width: 70px;
+    height: 90px;
+}
+
+.floating-button:hover {
+    rotate: 45deg;
+}
+
+.floating-button:active {
+    transition: all 0.5s ease-out allow-discrete;
+}
 
 /*AQUÍ EMPIEZA SECTION TWO*/
 

@@ -77,14 +77,44 @@ window.addEventListener("load", () => {
 // VIAJE DEL INICIO A SECCIONES:
 //Event listener for the reservaButton
 document.getElementById('reservaButton').addEventListener('click', function() {
-    const formContainer = document.getElementById('formContainer');
+  const formContainer = document.getElementById('linkHome');
     formContainer.scrollIntoView({ behavior: 'smooth' });
 });
 
 // Event listener for the ServiciosButton
 document.getElementById('serviciosButton').addEventListener('click', function() {
-    const sectionTwo = document.getElementById('sectionTwo');
+  const sectionTwo = document.getElementById('containerFigure');
     sectionTwo.scrollIntoView({ behavior: 'smooth' });
+});
+
+// Event listener for the HomeButton
+document.getElementById('homeButton').addEventListener('click', function () {
+  const sectionTwo = document.getElementById('sectionTwo');
+  sectionTwo.scrollIntoView({ behavior: 'smooth' });
+});
+
+//MUÑECO
+gsap.registerPlugin(ScrollTrigger);
+
+window.addEventListener("load", function () {
+  // Accediendo al botón flotante
+  const floatingButton = document.querySelector('.floating-button');
+
+  // Crear el ScrollTrigger para la sección "sectionTwo"
+  ScrollTrigger.create({
+    trigger: "#sectionTwo",  // el ID de la sección objetivo
+    start: "top center",    // cuando la parte superior de la sección llega al centro de la pantalla
+    end: "bottom center",   // cuando la parte inferior pasa el centro de la pantalla
+    onEnter: () => floatingButton.classList.add('show'), // mostrar el botón
+    onLeave: () => floatingButton.classList.remove('show'), // ocultar el botón
+    onEnterBack: () => floatingButton.classList.add('show'), // mostrar de nuevo al regresar
+    onLeaveBack: () => floatingButton.classList.remove('show') // ocultar al ir hacia arriba
+  });
+
+  // Asegurarse de que el botón se oculte inicialmente si la página carga y la sección no está en vista
+  if (!ScrollTrigger.isActive()) {
+    floatingButton.classList.remove('show');
+  }
 });
 
 // CARROUSEL
@@ -189,18 +219,18 @@ gsap.to(".marte", {
     dd = String(today.getDate()).padStart(2, "0"),
     mm = String(today.getMonth() + 1).padStart(2, "0"), // Months are zero-indexed
     yyyy = today.getFullYear(),
-    nextYear = yyyy + 1, // Set the next year for the birthday
-    dayMonth = "12/26/", // The day and month of the birthday
-    birthday = dayMonth + yyyy; // Full date for this year's birthday
+    nextYear = yyyy + 1, 
+    dayMonth = "12/26/", 
+    mission= dayMonth + yyyy;  
 
-  // If today's date is past the birthday, set it to next year
+  
   today = mm + "/" + dd + "/" + yyyy;
-  if (today > birthday) {
-    birthday = dayMonth + nextYear; // Update to next year's birthday
+  if (today > mission) {
+    mission = dayMonth + nextYear; 
   }
 
-  // Set the countdown target date (birthday)
-  const countDown = new Date(birthday).getTime(),
+ 
+  const countDown = new Date(mission).getTime(),
     x = setInterval(function () {
       const now = new Date().getTime(), // Get current time
         distance = countDown - now; // Calculate the remaining time
@@ -219,7 +249,7 @@ gsap.to(".marte", {
 
       // When countdown reaches zero, show birthday message
       if (distance < 0) {
-        document.getElementById("headline").innerText = "It's my birthday!";
+        document.getElementById("headline").innerText = "Despegandooooo!";
         document.getElementById("countdown").style.display = "none"; // Hide countdown
         document.getElementById("content").style.display = "block"; // Show emojis
         clearInterval(x); // Stop the countdown

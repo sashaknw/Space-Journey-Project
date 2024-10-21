@@ -51,12 +51,12 @@
         <!--LOGO-->
         <div class="logo-container">
           <a title="SpaceJourney" href="">
-            <img src="assets/Logo negativo.svg" alt="SpaceJourney" class="logo-SpaceJourney" width="5%" />
+            <img src="assets/Logo negativo.svg" alt="SpaceJourney" class="logo-SpaceJourney" id="logo" width="5%" />
           </a>
         </div>
 
         <!--BOTONES-->
-        <button type="button" title="Home">
+        <button type="button" title="Home" id="homeButton">
           <span>Inicio</span>
           <span class="material-symbols-outlined" aria-hidden="true">home</span>
           <svg viewBox="0 0 300 300" aria-hidden="true">
@@ -120,7 +120,11 @@
 
   </header>
 
-
+<!--boton flotante-->
+<button class="floating-button" onclick="location.href='#logo';"><img
+    src="https://static.wixstatic.com/media/c22c23_d4a3e103764b464499a90fda1dd71676~mv2.webp/v1/fill/w_335,h_551,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/new%20astro.webp"
+    alt="icono-astronauta">
+</button>
 
   <section class="sectionTwo" id="sectionTwo">
     <!-- scrollUp button iría aquí -->
@@ -152,7 +156,7 @@
 
 
 
-  <section class="sectionThree">
+  <section class="sectionThree" id="sectionThree">
     <div class="overMission">
     <div class="textMission">
       <img src="assets/marte.png" class="marte">
@@ -165,7 +169,7 @@
       </div>
 
     <!-- //misiones -->
-    <div class="containerFigure">
+    <div class="containerFigure" id="containerFigure">
       <figure>
         <img class="imageMission" src="assets/mission1.png" alt="station" width="50%">
         <figcaption class="figcaptionOrbitaBaja">
@@ -277,7 +281,7 @@
 
     </div>
 
-    <div class="form-Title">
+    <div id="linkHome" class="form-Title" >
       <h1>shut up,<br>'nd take my money!</h1>
      </div>
 
