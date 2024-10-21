@@ -392,3 +392,21 @@ function cerrarVentanaEmergente(confirmado) {
   }
 }
 
+//star wars
+
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// Función para cerrar la ventana emergente
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+// Opcional: Cierra la ventana emergente si se hace clic fuera de ella
+window.onclick = function (event) {
+  if (event.target == document.getElementById("myModal")) {
+    closeModal();
+  }
+
+}
