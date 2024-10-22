@@ -379,18 +379,8 @@ function cerrarVentanaEmergente(confirmado) {
   const overlay = document.getElementById("overlay");
   overlay.style.display = "none";
 
-
-
-
-  // Llevar al usuario al inicio de la página
-  window.scrollTo(0, 0);
-
-  if (confirmado) {
-    //alert('Formulario enviado exitosamente.');
-  } else {
-    //alert('El envío del formulario ha sido cancelado.');
-  }
 }
+
 
 //star wars
 
