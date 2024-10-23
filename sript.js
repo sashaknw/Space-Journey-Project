@@ -256,15 +256,13 @@ gsap.to(".marte", {
       }
     }, 1000); // Update every second
 })();
-
-//FORMULARIO
+// FORMULARIO
 // Crear el formulario dinámicamente
 function crearFormulario() {
   const formulario = document.createElement("form");
   formulario.setAttribute("id", "miFormulario");
 
-  // // Crear el campo Nombre
-
+  // Crear el campo Nombre
   const divNombre = document.createElement("div");
   divNombre.className = "input-container";
   const iconoNombre = document.createElement("i");
@@ -277,8 +275,7 @@ function crearFormulario() {
   divNombre.appendChild(iconoNombre);
   divNombre.appendChild(inputNombre);
 
-  // // Crear el campo Apellidos
-
+  // Crear el campo Apellidos
   const divApellidos = document.createElement("div");
   divApellidos.className = "input-container";
   const iconoApellidos = document.createElement("i");
@@ -291,8 +288,7 @@ function crearFormulario() {
   divApellidos.appendChild(iconoApellidos);
   divApellidos.appendChild(inputApellidos);
 
-  // // Crear el campo Correo Electrónico
-
+  // Crear el campo Correo Electrónico
   const divCorreo = document.createElement("div");
   divCorreo.className = "input-container";
   const iconoCorreo = document.createElement("i");
@@ -305,8 +301,7 @@ function crearFormulario() {
   divCorreo.appendChild(iconoCorreo);
   divCorreo.appendChild(inputCorreo);
 
-  // // Crear el campo Teléfono
-
+  // Crear el campo Teléfono
   const divTelefono = document.createElement("div");
   divTelefono.className = "input-container";
   const iconoTelefono = document.createElement("i");
@@ -319,7 +314,7 @@ function crearFormulario() {
   divTelefono.appendChild(iconoTelefono);
   divTelefono.appendChild(inputTelefono);
 
-  // // Crear el campo comentarios
+  // Crear el campo comentarios
   const divComentarios = document.createElement("div");
   divComentarios.className = "input-container";
   const iconoComentarios = document.createElement("i");
@@ -335,12 +330,7 @@ function crearFormulario() {
   const botonEnviar = document.createElement("button");
   botonEnviar.textContent = "Despegar";
   botonEnviar.type = "submit";
-  formulario.appendChild(botonEnviar);
-
-  //INTENTO DE CREAR CLASE!!
   botonEnviar.classList.add("botoncito");
-  botonEnviar.textContent = "Despegar";
-  botonEnviar.setAttribute("type", "submit");
 
   // Añadir los elementos al formulario
   formulario.appendChild(divNombre);
@@ -351,7 +341,6 @@ function crearFormulario() {
   formulario.appendChild(botonEnviar);
 
   // Añadir el formulario al final del body
-  // document.body.appendChild(formulario);
   document.getElementById("formContainer").appendChild(formulario);
 
   // Escuchar el evento de envío del formulario
@@ -360,7 +349,7 @@ function crearFormulario() {
     event.preventDefault();
 
     // Mostrar la ventana emergente personalizada
-    mostrarVentanaEmergente();
+    mostrarVentanaEmergente(formulario);
   });
 }
 
@@ -368,17 +357,28 @@ function crearFormulario() {
 crearFormulario();
 
 // Función para mostrar la ventana emergente personalizada
-function mostrarVentanaEmergente() {
-  // Mostrar el overlay y la ventana emergente
+function mostrarVentanaEmergente(formulario) {
   const overlay = document.getElementById("overlay");
   overlay.style.display = "flex";
+
+  // Store the form reference for closing the modal
+  overlay.formulario = formulario;
 }
 
-//Función para cerrar la ventana emergente
+// Función para cerrar la ventana emergente
 function cerrarVentanaEmergente(confirmado) {
   const overlay = document.getElementById("overlay");
   overlay.style.display = "none";
 
+  // Resetear los campos del formulario en ambos casos
+  overlay.formulario.reset();
+  
+  if (confirmado) {
+    
+    console.log("Formulario aceptado");
+  } else {
+    console.log("Formulario cancelado");
+  }
 }
 
 
